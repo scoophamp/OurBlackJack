@@ -13,10 +13,7 @@ namespace TheBlackJack
 
         public void TooHigh()
         {
-            if (true)
-            {
 
-            }
         }
 
     }
