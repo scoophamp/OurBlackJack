@@ -11,6 +11,8 @@ namespace TheBlackJack
         static void Main(string[] args)
         {
             BlackJackGame blackjackgame = new BlackJackGame();
+
+            blackjackgame.writedeck();
             
         }
     }
