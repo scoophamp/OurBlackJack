@@ -19,21 +19,30 @@ namespace TheBlackJack
         public void Meny()
         {
             Console.WriteLine("Welcome to Black Jack");
-            Console.WriteLine("You start at " + player._MyAmount + " coins.");
-            Console.WriteLine("How much do you wanna bet?");
-
-            player._myBet = int.Parse(Console.ReadLine());
-            if (player._myBet > amount._myAmount)
-            {
-             
+            Console.WriteLine("You start at " + player._PlayerAmount + " coins.");
+           
             while (true)
             {
-                Console.WriteLine("You can't bet more than your amount");
-            }
-            }
-            Console.WriteLine("You've betted " + player._myBet);
+                Console.WriteLine("How much do you wanna bet?");
 
-            Console.ReadLine();
+                player._PlayerBet = int.Parse(Console.ReadLine());
+            if (player._PlayerBet > player._PlayerAmount)
+            
+                while (player._PlayerBet > player._PlayerAmount)
+                {
+                    Console.WriteLine("You can't bet more than your amount");
+                    break;
+                }
+                
+            
+
+            else
+            {
+                Console.WriteLine("You've betted " + player._PlayerBet);
+            }
+            }
+
+           
         }  
 }
 }
