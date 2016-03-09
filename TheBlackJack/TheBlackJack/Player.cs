@@ -30,7 +30,10 @@ namespace TheBlackJack
         }
         public void Stay()
         {
-
+            foreach (var item in PlayerCard)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
