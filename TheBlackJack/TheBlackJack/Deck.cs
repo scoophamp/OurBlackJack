@@ -72,7 +72,7 @@ namespace TheBlackJack
             _deck.Add(new Card('\u2663',"A",11));//Klöver ess
             _deck.Add(new Card('\u2660',"A",11));//Spader ess
         }
-       
+
 
 
 
