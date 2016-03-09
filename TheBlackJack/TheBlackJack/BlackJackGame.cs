@@ -13,6 +13,23 @@ namespace TheBlackJack
         Deck deck = new Deck();
         Player player = new Player();
         Rules rules = new Rules();
-       
+        Amount amount = new Amount();
+     
+        
+        public void Meny()
+        {
+            Console.WriteLine("Welcome to Black Jack");
+            Console.WriteLine("You start at " + amount._myAmount + " coins.");
+            Console.WriteLine("How much do you wanna bet?");
+
+            player._myBet = int.Parse(Console.ReadLine());
+            while (player._myBet > amount._myAmount)
+            {
+                Console.WriteLine("You can't bet more than your amount");
+            }
+            Console.WriteLine("You've betted " + player._myBet);
+
+            Console.ReadLine();
+        }  
 }
 }
