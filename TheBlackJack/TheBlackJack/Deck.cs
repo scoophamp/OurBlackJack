@@ -15,7 +15,7 @@ namespace TheBlackJack
             foreach (var item in _deck)
             {
                 Console.WriteLine(item);
-                Console.ReadKey();
+                
             }
         }
 

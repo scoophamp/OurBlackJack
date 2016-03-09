@@ -14,7 +14,10 @@ namespace TheBlackJack
         Player player = new Player();
         Rules rules = new Rules();
         
-        
-    
+        public void writedeck()
+        {
+            deck.PrintList();
+
+        }    
     }
 }
