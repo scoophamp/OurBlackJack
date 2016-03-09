@@ -15,7 +15,7 @@ namespace TheBlackJack
         {
             this._deck = new List<Card>();
             //U+2665=hjärter
-            _deck.Add(new Card('\u2665' , "2",2));
+            _deck.Add(new Card('\u2665',"2",2));
             _deck.Add(new Card('\u2665',"3",3));
             _deck.Add(new Card('\u2665', "4",4));
             _deck.Add(new Card('\u2665',"5",5));
