@@ -17,7 +17,7 @@ namespace TheBlackJack
         public void writedeck()
         {
             deck.PrintList();
-
-        }    
+    
     }
+}
 }
