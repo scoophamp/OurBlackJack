@@ -34,14 +34,16 @@ namespace TheBlackJack
                     break;
                 }
                 
-            
-
             else
             {
                 Console.WriteLine("You've betted " + player._PlayerBet);
-            }
+                    break;
             }
 
+            }
+          
+            Console.WriteLine("[H]it or [S]tay?");
+            Console.ReadKey();
            
         }  
 }
