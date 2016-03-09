@@ -13,10 +13,10 @@ namespace TheBlackJack
 
         Player player = new Player();
 
-        public int Win()
+        public int Win(int _myAmount, int bet)
         {
-            player._myBet = player._myBet * 2;
-            _myAmount = _myAmount + player._myBet;
+            bet *= 2;
+            _myAmount = _myAmount + bet;
             
             return _myAmount;
         }
