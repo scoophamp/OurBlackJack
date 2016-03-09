@@ -14,8 +14,9 @@ namespace TheBlackJack
         Player player = new Player();
         Rules rules = new Rules();
         Amount amount = new Amount();
-     
-        
+
+        string val;
+
         public void Meny()
         {
             Console.WriteLine("Welcome to Black Jack");
@@ -42,9 +43,31 @@ namespace TheBlackJack
 
             }
           
-            Console.WriteLine("[H]it or [S]tay?");
-            Console.ReadKey();
+            
            
         }  
+
+        public void GameOn()
+        {
+            
+            Console.WriteLine("[H]it or [S]tay?");
+            val = Console.ReadLine();
+            switch (val)
+            {
+                case "H":
+                    player.HitANewCard();
+                break;
+
+                case "S":
+                    player.Stay();
+                    break;
+
+                default:
+                    break;
+            }
+
+
+            Console.ReadKey();
+        }
 }
 }
