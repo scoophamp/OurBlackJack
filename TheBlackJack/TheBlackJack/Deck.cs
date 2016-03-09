@@ -10,5 +10,17 @@ namespace TheBlackJack
     {
         List<Card> _deck = new List<Card>();
         
-    }
+        public void PrintList()
+        {
+            foreach (var item in _deck)
+            {
+                Console.WriteLine(item);
+                Console.ReadKey();
+            }
+        }
+
+
+	}
+        
+    
 }

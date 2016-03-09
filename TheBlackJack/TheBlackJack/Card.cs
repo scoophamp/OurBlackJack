@@ -11,7 +11,7 @@ namespace TheBlackJack
         public List<string> cards = new List<string>();
         //public int _value { get; set; }
         //public string _suit { get; set; }
-        public void AddCardToList()
+        public void AddCardToList()//Adds all the cards number and suits
         {
             //U+2665=hjärter
             cards.Add('\u2665' + "2");
@@ -72,5 +72,6 @@ namespace TheBlackJack
             cards.Add('\u2660' + "A");//Spader ess
 
         }
-    }
+     
+}
 }
