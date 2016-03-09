@@ -13,8 +13,8 @@ namespace TheBlackJack
         Deck deck = new Deck();
         Player player = new Player();
         Rules rules = new Rules();
-        
-        
-    
+
+
+
     }
 }
