@@ -19,7 +19,7 @@ namespace TheBlackJack
             this.DealerCard = new List<Card>();
 
         }
-        public void getDeck(List<Card> cardList)
+        public void getDeck(List<Card> cardList)//Tar in kortlistan går igenom den och lägger till den i sin deck
         {
             foreach (var item in cardList)
             {
@@ -30,7 +30,7 @@ namespace TheBlackJack
         {
             amount._dealerAmount = 100;
         }
-        public void GetCard()
+        public void GetCard()//Lägger till första kortet i listan till sin hand och tar sedan bort den
         {
 
             DealerCard.Add(deck[0]);
@@ -38,7 +38,7 @@ namespace TheBlackJack
            
         }
         Random random = new Random();
-        public void ShuffleCard(List<Card> _deck)
+        public void ShuffleCard(List<Card> _deck)//Tar in listan med alla korten och sedan blandar
         {
             Card holder = new Card();
 
@@ -49,15 +49,15 @@ namespace TheBlackJack
                 {
                     int indexNr = random.Next(52);
 
-                    holder = _deck[indexNr];
-                    _deck.RemoveAt(indexNr);
-                    _deck.Add(holder);
+                    holder = _deck[indexNr];//Sätter det slumpvalda kortet till holder
+                    _deck.RemoveAt(indexNr);//Tar bort slumpkortet från listan
+                    _deck.Add(holder);//Lägger till kortet som holder har igen alltså det slumpvalda kortet
 
 
                 }
             }
         }
-        public Card GiveAwayCard()
+        public Card GiveAwayCard()//Skapar upp ett nytt kort. sätter första kortet i listan till den. Tar bort kortet från listan sen return kortet
         {
             Card givecard = new Card();
             givecard = deck[0];
