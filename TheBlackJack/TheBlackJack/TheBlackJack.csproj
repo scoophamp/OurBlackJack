@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Amount.cs" />
+    <Compile Include="BlackJackGame.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="Dealer.cs" />
     <Compile Include="Deck.cs" />

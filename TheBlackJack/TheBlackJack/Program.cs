@@ -10,11 +10,8 @@ namespace TheBlackJack
     {
         static void Main(string[] args)
         {
-            Card card = new Card();
-            Dealer dealer = new Dealer();
-            Deck deck = new Deck();
-            Player player = new Player();
-            Rules rules = new Rules();
+            BlackJackGame blackjackgame = new BlackJackGame();
+
         }
     }
 }
