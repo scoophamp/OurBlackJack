@@ -8,5 +8,6 @@ namespace TheBlackJack
 {
     class Dealer
     {
+        List<string> DealerCard;
     }
 }
