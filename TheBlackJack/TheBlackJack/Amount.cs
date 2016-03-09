@@ -24,6 +24,10 @@ namespace TheBlackJack
             _myAmount = _myAmount - player._myBet;
             return _myAmount;
         }
+        public void CheckValue()
+        {
+            _myAmount = _myAmount;
+        }
 
     }
 }
