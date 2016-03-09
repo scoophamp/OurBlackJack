@@ -9,14 +9,15 @@ namespace TheBlackJack
     class Amount
     {
         public int _myAmount { get; set; }
-        public int _dealAmount { get; set; }
+        public int _dealerAmount { get; set; }
 
         Player player = new Player();
 
         public int Win()
         {
-            _myAmount = player._myBet * 2;
-
+            player._myBet = player._myBet * 2;
+            _myAmount = _myAmount + player._myBet;
+            
             return _myAmount;
         }
         public int Loose()
