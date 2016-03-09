@@ -8,5 +8,7 @@ namespace TheBlackJack
 {
     class Rules
     {
+
+
     }
 }
