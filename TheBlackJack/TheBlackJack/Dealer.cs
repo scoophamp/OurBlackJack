@@ -59,10 +59,10 @@ namespace TheBlackJack
         }
         public Card GiveAwayCard()//Skapar upp ett nytt kort. sätter första kortet i listan till den. Tar bort kortet från listan sen return kortet
         {
-            Card givecard = new Card();
-            givecard = deck[0];
-            deck.RemoveAt(0);
-            return givecard;
+            Card givecard = new Card();// Skapar upp ett nytt kort som heter givecard
+            givecard = deck[0];//Sätter givecard till det första kortet i listan
+            deck.RemoveAt(0);//Tar bort första kortet i listan som alltså är givecard
+            return givecard;//Skickar(Returna)givecard till den som använder denna metoden
         }
     }
 }
