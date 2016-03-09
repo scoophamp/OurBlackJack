@@ -9,8 +9,8 @@ namespace TheBlackJack
     class Card
     {
         public List<string> cards = new List<string>();
-        public int _value { get; set; }
-        public string _suit { get; set; }
+        //public int _value { get; set; }
+        //public string _suit { get; set; }
         public void AddCardToList()
         {
             //U+2665=hjärter
