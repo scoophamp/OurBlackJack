@@ -52,7 +52,7 @@ namespace TheBlackJack
             
             Console.WriteLine("[H]it or [S]tay?");
             val = Console.ReadLine();
-            switch (val)
+            switch (val.ToUpper())
             {
                 case "H":
                     Console.WriteLine("You got: ");
