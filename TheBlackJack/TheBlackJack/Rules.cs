@@ -11,5 +11,13 @@ namespace TheBlackJack
         Player player = new Player();
         Dealer dealer = new Dealer();
 
+        public void TooHigh()
+        {
+            if (true)
+            {
+
+            }
+        }
+
     }
 }

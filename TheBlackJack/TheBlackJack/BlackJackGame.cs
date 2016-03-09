@@ -51,6 +51,8 @@ namespace TheBlackJack
         public void GameOn()
         {
             
+            Console.WriteLine(dealer.GiveAwayCard());
+            
             Console.WriteLine("[H]it or [S]tay?");
             val = Console.ReadLine();
             switch (val.ToUpper())
