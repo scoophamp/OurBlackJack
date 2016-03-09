@@ -10,13 +10,17 @@ namespace TheBlackJack
     {
         public int _myBet { get; set; }
         public int _MyAmount { get; set; }
-        List<string> PlayerCard;
-      
+        List<Card> PlayerCard;
+
         Deck deck = new Deck();
 
-       public Player()
+        public Player()
         {
             this._MyAmount = 100;
+        }
+        public Player(List<Card>deck)
+        {
+            this.PlayerCard = deck;
         }
         public void HitANewCard()
         {
