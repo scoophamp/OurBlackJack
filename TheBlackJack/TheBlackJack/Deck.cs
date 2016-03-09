@@ -22,7 +22,8 @@ namespace TheBlackJack
                     positionXcard = random.Next(52);
                     var card=positionXcard;
                     positionYcard = positionXcard;
-
+                    
+                    
 
                 }
             }
