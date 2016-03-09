@@ -19,10 +19,11 @@ namespace TheBlackJack
 
         public void Meny()
         {
+            dealer.getDeck(deck.giveDeck());
             Console.WriteLine("Welcome to Black Jack");
             Console.WriteLine("You start at " + player._PlayerAmount + " coins.");
            
-            while (true)
+            while (val != "Q")
             {
                 Console.WriteLine("How much do you wanna bet?");
 
@@ -43,20 +44,20 @@ namespace TheBlackJack
 
             }
           
-            
-           
         }  
 
         public void GameOn()
         {
             
+            Console.WriteLine(dealer.GiveAwayCard());
+            
             Console.WriteLine("[H]it or [S]tay?");
             val = Console.ReadLine();
-            switch (val)
+            switch (val.ToUpper())
             {
                 case "H":
-                    Console.WriteLine("You");
-                    player.HitANewCard();
+                    Console.WriteLine("You got: ");
+                    player.PrintPlayerCard();
                 break;
 
                 case "S":

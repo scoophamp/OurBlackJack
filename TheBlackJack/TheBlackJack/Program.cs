@@ -13,7 +13,8 @@ namespace TheBlackJack
             BlackJackGame blackjackgame = new BlackJackGame();
             
             blackjackgame.Meny();
-            
+            blackjackgame.GameOn();
+
         }
     }
 }
