@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheBlackJack
 {
-    class Program
+    class Deck
     {
-        static void Main(string[] args)
-        {
-            
-        }
     }
 }

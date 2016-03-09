@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace TheBlackJack
 {
-    class Program
+    class Amount
     {
-        static void Main(string[] args)
+        List<string> cards = new List<string>();
+
+        public void He()
         {
-            
+            cards.Add("a");
         }
+        
     }
 }
