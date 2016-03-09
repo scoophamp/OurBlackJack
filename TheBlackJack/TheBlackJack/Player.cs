@@ -35,5 +35,12 @@ namespace TheBlackJack
                 Console.WriteLine(item);
             }
         }
+        public void PrintPlayerCard()
+        {
+            foreach (var item in PlayerCard)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }

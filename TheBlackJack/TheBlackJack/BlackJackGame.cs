@@ -23,7 +23,7 @@ namespace TheBlackJack
             Console.WriteLine("Welcome to Black Jack");
             Console.WriteLine("You start at " + player._PlayerAmount + " coins.");
            
-            while (true)
+            while (val != "Q")
             {
                 Console.WriteLine("How much do you wanna bet?");
 
@@ -57,7 +57,7 @@ namespace TheBlackJack
             {
                 case "H":
                     Console.WriteLine("You got: ");
-                    player.HitANewCard();
+                    player.PrintPlayerCard();
                 break;
 
                 case "S":

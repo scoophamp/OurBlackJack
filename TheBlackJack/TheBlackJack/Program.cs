@@ -14,6 +14,7 @@ namespace TheBlackJack
             
             blackjackgame.Meny();
             blackjackgame.GameOn();
+
         }
     }
 }
