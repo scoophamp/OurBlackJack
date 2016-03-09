@@ -55,7 +55,7 @@ namespace TheBlackJack
             switch (val)
             {
                 case "H":
-                    Console.WriteLine("You");
+                    Console.WriteLine("You got: ");
                     player.HitANewCard();
                 break;
 
