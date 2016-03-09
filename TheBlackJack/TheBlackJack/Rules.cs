@@ -8,5 +8,7 @@ namespace TheBlackJack
 {
     class Rules
     {
+        Dealer dealer = new Dealer();
+        Player player = new Player();
     }
 }
