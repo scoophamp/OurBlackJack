@@ -8,6 +8,13 @@ namespace TheBlackJack
 {
     class Dealer
     {
+        Amount amount = new Amount();
+
         List<string> DealerCard;
+
+        public void DealerAmount()
+        {
+            amount._dealerAmount = 100;
+        }
     }
 }
