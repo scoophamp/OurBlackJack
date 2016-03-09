@@ -8,9 +8,22 @@ namespace TheBlackJack
 {
     class Card
     {
+
+        public char _Type { get; set; }
+        public string _Nr { get; set; }
         public List<string> cards = new List<string>();
-        //public int _value { get; set; }
+        public int _value { get; set; }
         //public string _suit { get; set; }
+        public Card()
+        {
+
+        }
+        public Card(char type,string nr,int value)
+        {
+            this._Type = type;
+            this._Nr = nr;
+            this._value = value;
+        }
         public void AddCardToList()//Adds all the cards number and suits
         {
             //U+2665=hjärter
