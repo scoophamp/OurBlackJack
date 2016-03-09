@@ -19,6 +19,7 @@ namespace TheBlackJack
 
         public void Meny()
         {
+            dealer.getDeck(deck.giveDeck());
             Console.WriteLine("Welcome to Black Jack");
             Console.WriteLine("You start at " + player._PlayerAmount + " coins.");
            

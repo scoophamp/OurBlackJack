@@ -9,13 +9,22 @@ namespace TheBlackJack
     class Dealer
     {
         Amount amount = new Amount();
-        Deck deck;
+        Player player = new Player();
+        List <Card> deck;
         List<Card> DealerCard;
 
         public Dealer()
         {
-            this.deck = new Deck();
+            this.deck = new List<Card>();
             this.DealerCard = new List<Card>();
+
+        }
+        public void getDeck(List<Card> cardList)
+        {
+            foreach (var item in cardList)
+            {
+                deck.Add(item);
+            }
         }
         public void DealerAmount()
         {
@@ -23,7 +32,10 @@ namespace TheBlackJack
         }
         public void GetCard()
         {
-            
+
+            DealerCard.Add(deck[0]);
+            deck.RemoveAt(0);
+           
         }
         Random random = new Random();
         public void ShuffleCard(List<Card> _deck)
@@ -45,9 +57,12 @@ namespace TheBlackJack
                 }
             }
         }
-        public void GiveCard()
+        public Card GiveAwayCard()
         {
-
+            Card givecard = new Card();
+            givecard = deck[0];
+            deck.RemoveAt(0);
+            return givecard;
         }
     }
 }
