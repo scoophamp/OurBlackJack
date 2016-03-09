@@ -12,7 +12,6 @@ namespace TheBlackJack
         {
             BlackJackGame blackjackgame = new BlackJackGame();
 
-            blackjackgame.writedeck();
             
         }
     }
