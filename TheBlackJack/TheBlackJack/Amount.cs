@@ -8,12 +8,22 @@ namespace TheBlackJack
 {
     class Amount
     {
-        List<string> cards = new List<string>();
+        public int _myAmount { get; set; }
+        public int _dealAmount { get; set; }
 
-        public void He()
+        Player player = new Player();
+
+        public int Win()
         {
-            cards.Add("a");
+            _myAmount = player._myBet * 2;
+
+            return _myAmount;
         }
-        
+        public int Loose()
+        {
+            _myAmount = _myAmount - player._myBet;
+            return _myAmount;
+        }
+
     }
 }

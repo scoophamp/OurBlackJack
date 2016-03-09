@@ -8,5 +8,6 @@ namespace TheBlackJack
 {
     class Player
     {
+        public int _myBet { get; set; }
     }
 }

@@ -8,5 +8,6 @@ namespace TheBlackJack
 {
     class Deck
     {
+        List<Card> _deck = new List<Card>();
     }
 }
