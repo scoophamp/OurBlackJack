@@ -52,10 +52,10 @@ namespace TheBlackJack
             
             Console.WriteLine("[H]it or [S]tay?");
             val = Console.ReadLine();
-            switch (val.ToUpper())
+            switch (val)
             {
                 case "H":
-                    Console.WriteLine("You got: ");
+                    Console.WriteLine("You got a: ");
                     player.HitANewCard();
                 break;
 
