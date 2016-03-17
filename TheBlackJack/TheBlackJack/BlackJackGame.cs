@@ -15,7 +15,7 @@ namespace TheBlackJack
         Rules rules = new Rules();
         Amount amount = new Amount();
 
-        string val;
+        
 
         public void Meny()
         {
@@ -52,25 +52,28 @@ namespace TheBlackJack
             HitANewCard();
 
             player.PrintPlayerCard();
-
-            Console.WriteLine("[H]it or [S]tay?");
-            val = Console.ReadLine();
-            switch (val.ToUpper())
+            string choice = " ";
+            while (choice!="S")
             {
-                case "H":
-                    Console.WriteLine("You got: ");
-                    player.PrintPlayerCard();
-                    HitANewCard();
-                break;
+                Console.WriteLine("[H]it or [S]tay?");
+                var val = Console.ReadLine();
+                switch (val.ToUpper())
+                {
+                    case "H":
+                        Console.WriteLine("You got: ");
+                        HitANewCard();
+                        player.PrintPlayerCard();
+                        break;
 
-                case "S":
-                    player.Stay();
-                    break;
+                    case "S":
+                        player.Stay();
+                        
+                        break;
 
-                default:
-                    break;
+                    default:
+                        break;
+                }
             }
-
 
             Console.ReadKey();
         }
