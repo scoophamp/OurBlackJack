@@ -48,9 +48,10 @@ namespace TheBlackJack
 
         public void GameOn()
         {
+            deck.giveDeck();
+            
             
             Console.WriteLine(dealer.GiveAwayCard());
-            
             Console.WriteLine("[H]it or [S]tay?");
             val = Console.ReadLine();
             switch (val.ToUpper())
@@ -58,6 +59,7 @@ namespace TheBlackJack
                 case "H":
                     Console.WriteLine("You got: ");
                     player.PrintPlayerCard();
+                    HitANewCard();
                 break;
 
                 case "S":
@@ -71,5 +73,11 @@ namespace TheBlackJack
 
             Console.ReadKey();
         }
-}
+        public void HitANewCard()
+        {
+
+            var card=dealer.GiveAwayCard();
+            player.AddCard(card);
+        }
+    }
 }

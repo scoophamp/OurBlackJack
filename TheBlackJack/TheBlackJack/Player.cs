@@ -8,7 +8,7 @@ namespace TheBlackJack
 {
     class Player
     {
-        Dealer dealer = new Dealer();
+        
         public int _PlayerBet { get; set; }
         public int _PlayerAmount { get; set; }
         List<Card> PlayerCard;
@@ -23,10 +23,10 @@ namespace TheBlackJack
         {
             this.PlayerCard = deck;
         }
-        public void HitANewCard()
+        public void AddCard(Card card)
         {
             
-            PlayerCard.Add(dealer.GiveAwayCard());
+            PlayerCard.Add(card);
         }
         public void Stay()
         {

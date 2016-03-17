@@ -11,18 +11,17 @@ namespace TheBlackJack
         public int _myAmount { get; set; }
         public int _dealerAmount { get; set; }
 
-        Player player = new Player();
-
-        public int Win(int _myAmount, int bet)
+        
+        public int Win(int bet)
         {
             bet *= 2;
             _myAmount = _myAmount + bet;
             
             return _myAmount;
         }
-        public int Loose()
+        public int Loose(int bet)
         {
-            _myAmount = _myAmount - player._PlayerBet;
+            _myAmount = _myAmount - bet;
             return _myAmount;
         }
         public void CheckValue()

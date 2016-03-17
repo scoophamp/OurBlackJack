@@ -8,8 +8,7 @@ namespace TheBlackJack
 {
     class Rules
     {
-        Player player = new Player();
-        Dealer dealer = new Dealer();
+       
 
         public void TooHigh()
         {

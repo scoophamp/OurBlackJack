@@ -9,7 +9,6 @@ namespace TheBlackJack
     class Dealer
     {
         Amount amount = new Amount();
-        Player player = new Player();
         List <Card> deck;
         List<Card> DealerCard;
 
