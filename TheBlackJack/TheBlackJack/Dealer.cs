@@ -18,7 +18,7 @@ namespace TheBlackJack
             this.DealerCard = new List<Card>();
 
         }
-        public void getDeck(List<Card> cardList)//Tar in kortlistan går igenom den och lägger till den i sin deck
+        public void SetDeck(List<Card> cardList)//Tar in kortlistan går igenom den och lägger till den i sin deck
         {
             foreach (var item in cardList)
             {
@@ -29,7 +29,7 @@ namespace TheBlackJack
         {
             amount._dealerAmount = 100;
         }
-        public void GetCard()//Lägger till första kortet i listan till sin hand och tar sedan bort den
+        public void DealerGetCard()//Lägger till första kortet i listan till sin hand och tar sedan bort den
         {
 
             DealerCard.Add(deck[0]);

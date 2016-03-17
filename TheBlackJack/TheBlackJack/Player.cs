@@ -18,6 +18,7 @@ namespace TheBlackJack
        public Player()
         {
             this._PlayerAmount = 100;
+            this.PlayerCard = new List<Card>();
         }
         public Player(List<Card> deck)
         {

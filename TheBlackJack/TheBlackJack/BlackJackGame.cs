@@ -19,39 +19,40 @@ namespace TheBlackJack
 
         public void Meny()
         {
-            dealer.getDeck(deck.giveDeck());
+            
             Console.WriteLine("Welcome to Black Jack");
             Console.WriteLine("You start at " + player._PlayerAmount + " coins.");
-           
-            while (val != "Q")
-            {
-                Console.WriteLine("How much do you wanna bet?");
 
-                player._PlayerBet = int.Parse(Console.ReadLine());
-            if (player._PlayerBet > player._PlayerAmount)
             
+                Console.WriteLine("How much do you wanna bet?");
+                int bet = 0;
+                int.TryParse(Console.ReadLine(), out bet);
+                player._PlayerBet = bet;
                 while (player._PlayerBet > player._PlayerAmount)
                 {
-                    Console.WriteLine("You can't bet more than your amount");
-                    break;
+                    Console.WriteLine("Du har inte så mycket");
+                    Console.WriteLine("How much do you wanna bet?");
+                    bet = 0;
+                    int.TryParse(Console.ReadLine(), out bet);
+                    player._PlayerBet = bet;
                 }
                 
-            else
-            {
-                Console.WriteLine("You've betted " + player._PlayerBet);
-                    break;
-            }
+                    Console.WriteLine("You've betted " + player._PlayerBet);
+               
+            
 
-            }
-          
         }  
 
         public void GameOn()
         {
-            deck.giveDeck();
-            
-            
-            Console.WriteLine(dealer.GiveAwayCard());
+            var newDeck=deck.giveDeck();
+            dealer.ShuffleCard(newDeck);
+            dealer.SetDeck(newDeck);
+            HitANewCard();
+            HitANewCard();
+
+            player.PrintPlayerCard();
+
             Console.WriteLine("[H]it or [S]tay?");
             val = Console.ReadLine();
             switch (val.ToUpper())
@@ -78,6 +79,7 @@ namespace TheBlackJack
 
             var card=dealer.GiveAwayCard();
             player.AddCard(card);
+            
         }
     }
 }

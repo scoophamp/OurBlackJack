@@ -85,6 +85,12 @@ namespace TheBlackJack
             cards.Add('\u2660' + "A");//Spader ess
 
         }
-     
-}
+
+        public override string ToString()
+        {
+            var result = string.Format(this._Type + " " + this._Nr);
+            return result;
+        }
+
+    }
 }
