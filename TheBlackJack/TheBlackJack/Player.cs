@@ -40,6 +40,7 @@ namespace TheBlackJack
         {
             foreach (var item in PlayerCard)
             {
+                Console.WriteLine("PlayerCard:");
                 Console.WriteLine(item);
             }
         }

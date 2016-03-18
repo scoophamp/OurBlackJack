@@ -63,5 +63,13 @@ namespace TheBlackJack
             deck.RemoveAt(0);//Tar bort första kortet i listan som alltså är givecard
             return givecard;//Skickar(Returna)givecard till den som använder denna metoden
         }
+        public void PrintDealerCard()
+        {
+            foreach (var item in DealerCard)
+            {
+                Console.WriteLine("DealerCard:");
+                Console.WriteLine(item);
+            }
+        }
     }
 }

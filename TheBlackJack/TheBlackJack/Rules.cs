@@ -15,6 +15,19 @@ namespace TheBlackJack
         {
 
         }
+        public void DealerMustDraw(List<Card>dealerCard)
+        {
+            
+
+        }
+        public void EqualsCardFive(List<Card> dealerCard, List<Card> playerCard)
+        {
+
+        }
+        public void WhoWin(List<Card> dealerCard, List<Card> playerCard)
+        {
+
+        }
 
     }
 }

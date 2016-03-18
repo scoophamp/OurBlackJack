@@ -50,7 +50,9 @@ namespace TheBlackJack
             dealer.SetDeck(newDeck);
             HitANewCard();
             HitANewCard();
-
+            
+            dealer.DealerGetCard();
+            dealer.PrintDealerCard();
             player.PrintPlayerCard();
             string choice = " ";
             while (choice!="S")
