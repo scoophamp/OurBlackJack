@@ -30,7 +30,7 @@ namespace TheBlackJack
                 player._PlayerBet = bet;
                 while (player._PlayerBet > player._PlayerAmount)
                 {
-                    Console.WriteLine("Du har inte så mycket");
+                    Console.WriteLine("You don't have that much of amount");
                     Console.WriteLine("How much do you wanna bet?");
                     bet = 0;
                     int.TryParse(Console.ReadLine(), out bet);
