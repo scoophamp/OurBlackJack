@@ -49,13 +49,14 @@ namespace TheBlackJack
             dealer.ShuffleCard(newDeck);
             dealer.SetDeck(newDeck);
             HitANewCard();
-            HitANewCard();
             dealer.DealerGetCard();
+            HitANewCard();
+           
             dealer.PrintDealerCard();
             player.PrintPlayerCard();
             
-            string choice = " ";
-            while (choice!="S")
+            bool choice =true;
+            while (choice)
             {
                 Console.WriteLine("[H]it or [S]tay?");
                 var val = Console.ReadLine();
@@ -69,13 +70,14 @@ namespace TheBlackJack
 
                     case "S":
                         player.Stay();
-                        
+                        choice = false;
                         break;
 
                     default:
                         break;
                 }
             }
+            dealer.DealerGetCard();
 
             Console.ReadKey();
         }
