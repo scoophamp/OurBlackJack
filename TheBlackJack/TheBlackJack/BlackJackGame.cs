@@ -12,8 +12,13 @@ namespace TheBlackJack
         Dealer dealer = new Dealer();
         Deck deck = new Deck();
         Player player = new Player();
-        Rules rules = new Rules();
+        Rules rules;
         Amount amount = new Amount();
+
+        public BlackJackGame()
+        {
+            rules = new Rules(dealer);
+        }
 
         
 
@@ -53,6 +58,7 @@ namespace TheBlackJack
             HitANewCard();
            
             dealer.PrintDealerCard();
+            Console.WriteLine("----------");
             player.PrintPlayerCard();
             
             bool choice =true;
@@ -63,9 +69,13 @@ namespace TheBlackJack
                 switch (val.ToUpper())
                 {
                     case "H":
-                        Console.WriteLine("You got: ");
                         HitANewCard();
                         player.PrintPlayerCard();
+                        var playerresult=rules.PlayerTooHigh(player.PlayerCard);
+                        if(playerresult>21)
+                        {
+                            choice = false;
+                        }
                         break;
 
                     case "S":
@@ -79,8 +89,18 @@ namespace TheBlackJack
             }
             dealer.DealerGetCard();
             dealer.PrintDealerCard();
+            Console.WriteLine("------------");
+            rules.DealerMustDraw(dealer.DealerCard);
+            var dealerresult = rules.DealerTooHigh(dealer.DealerCard);
+            dealer.PrintDealerCard();
+            Console.WriteLine("DealerResult is: " + dealerresult);
+
+
+
+            rules.WhoWin(dealer.DealerCard,player.PlayerCard);
             
-            
+
+
 
             Console.ReadKey();
         }

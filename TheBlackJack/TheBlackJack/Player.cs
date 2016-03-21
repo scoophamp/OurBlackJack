@@ -11,7 +11,7 @@ namespace TheBlackJack
         
         public int _PlayerBet { get; set; }
         public int _PlayerAmount { get; set; }
-        List<Card> PlayerCard;
+        public List<Card> PlayerCard {get; set; }
       
         Deck deck = new Deck();
 

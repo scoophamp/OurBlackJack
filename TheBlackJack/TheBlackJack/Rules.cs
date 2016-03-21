@@ -8,38 +8,66 @@ namespace TheBlackJack
 {
     class Rules
     {
-        Player player = new Player();
-        Dealer dealer = new Dealer();
+        private Dealer _dealer;
+           
 
-
-        public void TooHigh(List<Card>playerCard)
+        public Rules(Dealer dealer)
         {
-            int result = 0;
-            foreach (var item in playerCard)
-            {
-                result += item._value;
-            }
-            if(result>21)
-            {
-                Console.WriteLine("BUSTED!!!");
-            }
+            this._dealer = dealer;
+            
         }
-        public void DealerMustDraw(List<Card>dealerCard)
+
+        public int DealerTooHigh(List<Card> dealerCard)
         {
             int result = 0;
             foreach (var item in dealerCard)
             {
                 result += item._value;
             }
-            if(result<17)
+            if (result > 21)
             {
-                dealer.DealerGetCard();
+                Console.WriteLine("BUSTED!!! Player Wins");
+            }
+            return result;
+        }
+        public int PlayerTooHigh(List<Card> playerCard)
+        {
+            int result = 0;
+            foreach (var item in playerCard)
+            {
+                result += item._value;
+               
+            }
+           if(result<21)
+            {
+                Console.WriteLine("You're not too high. You have: " + result);
+            }
+            if (result > 21)
+            {
+                Console.WriteLine($"You got {result}, and that means you are BUSTED!!! and Dealer Wins!!");
+            }
+            return result;
+        }
+        public void DealerMustDraw(List<Card> dealerCard)
+        {
+            int result = 0;
+            foreach (var item in dealerCard)
+            {
+                result += item._value;
+            }
+            if (result < 17)
+            {
+                _dealer.DealerGetCard();
+            }
+            else
+            {
+                _dealer.PrintDealerCard();
             }
 
         }
         public void EqualsCardFive(List<Card> dealerCard, List<Card> playerCard)
         {
-            
+
         }
         public void WhoWin(List<Card> dealerCard, List<Card> playerCard)
         {
@@ -52,14 +80,26 @@ namespace TheBlackJack
             foreach (var item in playerCard)
             {
                 playercard += item._value;
+
             }
-            if(dealercard>playercard)
+            if (dealercard < playercard)
+            {
+                Console.WriteLine("Player Wins!!");
+            }
+            else if (dealercard > playercard)
             {
                 Console.WriteLine("Dealer Wins!!");
             }
-            else if(dealercard < playercard)
+            else if(dealercard == playercard)
             {
-                Console.WriteLine("Player Wins!!");
+                if(playerCard.Count>=5)
+                {
+                    Console.WriteLine("Player Wins!!");
+                }
+                else if(playerCard.Count<5)
+                {
+                    Console.WriteLine("Dealer Wins!!");
+                }
             }
         }
 

@@ -10,7 +10,7 @@ namespace TheBlackJack
     {
         Amount amount = new Amount();
         List <Card> deck;
-        List<Card> DealerCard;
+        public List<Card> DealerCard { get; set; }
 
         public Dealer()
         {
