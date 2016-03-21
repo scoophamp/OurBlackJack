@@ -33,15 +33,15 @@ namespace TheBlackJack
         {
             foreach (var item in PlayerCard)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Players Card: "+item);
             }
         }
         public void PrintPlayerCard()
         {
             foreach (var item in PlayerCard)
             {
-                Console.WriteLine("PlayerCard:");
-                Console.WriteLine(item);
+                Console.WriteLine("PlayerCard: "+item);
+               
             }
         }
     }

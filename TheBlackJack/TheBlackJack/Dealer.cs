@@ -67,8 +67,8 @@ namespace TheBlackJack
         {
             foreach (var item in DealerCard)
             {
-                Console.WriteLine("DealerCard:");
-                Console.WriteLine(item);
+                Console.WriteLine("DealerCard: "+item);
+               
             }
         }
     }

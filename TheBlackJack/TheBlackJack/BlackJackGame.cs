@@ -78,6 +78,9 @@ namespace TheBlackJack
                 }
             }
             dealer.DealerGetCard();
+            dealer.PrintDealerCard();
+            
+            
 
             Console.ReadKey();
         }
