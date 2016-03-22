@@ -9,7 +9,8 @@ namespace TheBlackJack
     class Rules
     {
         private Dealer _dealer;
-           
+
+        private bool bust = true;
 
         public Rules(Dealer dealer)
         {
@@ -86,6 +87,7 @@ namespace TheBlackJack
             if (dealercard < playercard || dealercard > 21)
             {
                 Console.WriteLine("Player Wins!!");
+                
             }
             else if (dealercard > playercard || dealercard<21)
             {
