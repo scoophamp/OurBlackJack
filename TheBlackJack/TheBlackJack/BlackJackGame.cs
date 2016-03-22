@@ -67,7 +67,7 @@ namespace TheBlackJack
             HitANewCard();
 
             dealer.PrintDealerCard();
-            Console.WriteLine("---------------");
+            Console.WriteLine("----------------");
             player.PrintPlayerCard();
 
             bool choice = true;
@@ -92,6 +92,7 @@ namespace TheBlackJack
 
                     case "S":
                         player.Stay();
+                        Console.WriteLine("-----------------");
                         choice = false;
                         break;
 
@@ -101,7 +102,7 @@ namespace TheBlackJack
             }
             dealer.DealerGetCard();
             dealer.PrintDealerCard();
-            Console.WriteLine("------------");
+            Console.WriteLine("-----------------");
             rules.DealerMustDraw(dealer.DealerCard);
             var dealerresult = rules.DealerTooHigh(dealer.DealerCard);
            
@@ -117,7 +118,7 @@ namespace TheBlackJack
             }
             
             dealer.PrintDealerCard();
-            
+            Console.WriteLine("-----------------");
             rules.WhoWin(dealer.DealerCard, player.PlayerCard);
             Console.WriteLine("DealerResult is: " + dealerresult);
             if (rules.win == true)
