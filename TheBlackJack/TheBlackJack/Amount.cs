@@ -14,7 +14,7 @@ namespace TheBlackJack
         public int MyAmount
         {
             get { return _myAmount; }
-            set { _myAmount = value; }
+            set { _myAmount = 100; }
         }
        
         
