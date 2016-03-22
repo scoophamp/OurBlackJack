@@ -96,16 +96,17 @@ namespace TheBlackJack
             rules.DealerMustDraw(dealer.DealerCard);
             var dealerresult = rules.DealerTooHigh(dealer.DealerCard);
            
-            
             while (dealerresult < 17)
             {
                 rules.DealerMustDraw(dealer.DealerCard);
-                if (dealerresult > 17)
+                if (dealerresult < 17)
                 {
-                    break;
+                    rules.DealerMustDraw(dealer.DealerCard);
+                    break; 
                 }
                 break;
             }
+            
             dealer.PrintDealerCard();
             Console.WriteLine("DealerResult is: " + dealerresult);
             rules.WhoWin(dealer.DealerCard, player.PlayerCard);
@@ -118,7 +119,6 @@ namespace TheBlackJack
                 amount.Loose(amount.PlayerBet);
             }
             var myAmount=amount._myAmount;
-            Console.WriteLine("My Amount is: "+myAmount);
             Console.WriteLine(amount.CheckValue());
 
             Console.ReadKey();
