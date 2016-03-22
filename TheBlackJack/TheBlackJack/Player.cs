@@ -33,15 +33,20 @@ namespace TheBlackJack
         {
             foreach (var item in PlayerCard)
             {
-                Console.WriteLine("Players Card: "+item);
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("PlayerCard: " + item);
+                Console.ForegroundColor = ConsoleColor.White;
             }
         }
         public void PrintPlayerCard()
         {
             foreach (var item in PlayerCard)
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("PlayerCard: "+item);
-               
+                Console.ForegroundColor = ConsoleColor.White;
+
+
             }
         }
     }

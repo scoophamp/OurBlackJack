@@ -26,7 +26,7 @@ namespace TheBlackJack
             }
             if (result > 21)
             {
-                Console.WriteLine("BUSTED!!! Player Wins");
+                Console.WriteLine("BUSTED!!!");
             }
             return result;
         }
@@ -40,11 +40,15 @@ namespace TheBlackJack
             }
            if(result<21)
             {
-                Console.WriteLine("You're not too high. You have: " + result);
+                Console.WriteLine("You have: " + result);
             }
             if (result > 21)
             {
-                Console.WriteLine($"You got {result}, and that means you are BUSTED!!! and Dealer Wins!!");
+                Console.WriteLine($"You got {result}, and that means you are BUSTED!!!");
+            }
+            if(result==21)
+            {
+                Console.WriteLine("You got: "+result);
             }
             return result;
         }
@@ -65,10 +69,7 @@ namespace TheBlackJack
             }
 
         }
-        public void EqualsCardFive(List<Card> dealerCard, List<Card> playerCard)
-        {
-
-        }
+       
         public void WhoWin(List<Card> dealerCard, List<Card> playerCard)
         {
             int playercard = 0;
@@ -80,13 +81,13 @@ namespace TheBlackJack
             foreach (var item in playerCard)
             {
                 playercard += item._value;
-
+               
             }
-            if (dealercard < playercard)
+            if (dealercard < playercard || dealercard > 21)
             {
                 Console.WriteLine("Player Wins!!");
             }
-            else if (dealercard > playercard)
+            else if (dealercard > playercard || dealercard<21)
             {
                 Console.WriteLine("Dealer Wins!!");
             }
