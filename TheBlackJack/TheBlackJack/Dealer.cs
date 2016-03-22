@@ -8,7 +8,7 @@ namespace TheBlackJack
 {
     class Dealer
     {
-        Amount amount = new Amount();
+        
         List <Card> deck;
         public List<Card> DealerCard { get; set; }
 
@@ -25,10 +25,7 @@ namespace TheBlackJack
                 deck.Add(item);
             }
         }
-        public void DealerAmount()
-        {
-            amount._dealerAmount = 100;
-        }
+       
         public void DealerGetCard()//Lägger till första kortet i listan till sin hand och tar sedan bort den
         {
 

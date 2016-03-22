@@ -26,23 +26,23 @@ namespace TheBlackJack
         {
 
             Console.WriteLine("Welcome to Black Jack");
-            Console.WriteLine("You start at " + player._PlayerAmount + " coins.");
+            Console.WriteLine("You start at " + amount._myAmount + " coins.");
             Console.WriteLine("How much do you wanna bet?");
 
             int bet = 0;
             int.TryParse(Console.ReadLine(), out bet);
-            player._PlayerBet = bet;
+            amount.PlayerBet = bet;
 
-            while (player._PlayerBet > player._PlayerAmount)
+            while (bet > amount._myAmount)
             {
                 Console.WriteLine("You don't have that much of amount");
                 Console.WriteLine("How much do you wanna bet?");
                 bet = 0;
                 int.TryParse(Console.ReadLine(), out bet);
-                player._PlayerBet = bet;
+                amount.PlayerBet = bet;
             }
 
-            Console.WriteLine("You've betted " + player._PlayerBet);
+            Console.WriteLine("You've betted " + amount.PlayerBet);
 
 
 
@@ -109,7 +109,7 @@ namespace TheBlackJack
             dealer.PrintDealerCard();
             Console.WriteLine("DealerResult is: " + dealerresult);
             rules.WhoWin(dealer.DealerCard, player.PlayerCard);
-            var myAmount=player._PlayerAmount;
+            var myAmount=amount._myAmount;
             Console.WriteLine("My Amount is: "+myAmount);
 
             Console.ReadKey();
