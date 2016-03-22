@@ -14,7 +14,7 @@ namespace TheBlackJack
         
         public int Win(int bet)
         {
-            bet *= 2;
+            bet = bet * 2;
             _myAmount = _myAmount + bet;
             
             return _myAmount;
