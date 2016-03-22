@@ -32,6 +32,7 @@ namespace TheBlackJack
             int bet = 0;
             int.TryParse(Console.ReadLine(), out bet);
             amount.PlayerBet = bet;
+            amount._myAmount -= amount.PlayerBet;
 
             while (bet > amount._myAmount)
             {
@@ -40,6 +41,7 @@ namespace TheBlackJack
                 bet = 0;
                 int.TryParse(Console.ReadLine(), out bet);
                 amount.PlayerBet = bet;
+                
             }
 
             Console.WriteLine("You've betted " + amount.PlayerBet);
@@ -110,6 +112,7 @@ namespace TheBlackJack
             dealer.PrintDealerCard();
             Console.WriteLine("DealerResult is: " + dealerresult);
             rules.WhoWin(dealer.DealerCard, player.PlayerCard);
+            
             if (rules.win == true)
             {
                 amount.Win(amount.PlayerBet);
@@ -118,6 +121,7 @@ namespace TheBlackJack
             {
                 amount.Loose(amount.PlayerBet);
             }
+            
             var myAmount=amount._myAmount;
             Console.WriteLine(amount.CheckValue());
 

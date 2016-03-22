@@ -20,7 +20,7 @@ namespace TheBlackJack
         }
         public int Loose(int bet)
         {
-            _myAmount = _myAmount - bet;
+           
             return _myAmount;
         }
         public string CheckValue()
