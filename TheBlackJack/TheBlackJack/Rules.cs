@@ -62,12 +62,16 @@ namespace TheBlackJack
             }
             if (result < 17)
             {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("Dealer got a new card!");
+                Console.ForegroundColor = ConsoleColor.White;
                 _dealer.DealerGetCard();
-            }
-            else
-            {
                 _dealer.PrintDealerCard();
             }
+            //else
+            //{
+            //    _dealer.PrintDealerCard();
+            //}
 
         }
        

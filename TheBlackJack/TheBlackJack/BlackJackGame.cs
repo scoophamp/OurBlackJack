@@ -112,18 +112,19 @@ namespace TheBlackJack
             while (dealerresult < 17)
             {
                 rules.DealerMustDraw(dealer.DealerCard);
-                if (dealerresult < 17)
+                if (dealerresult > 17)
                 {
-                    rules.DealerMustDraw(dealer.DealerCard);
+                    
                     break; 
                 }
                 break;
             }
             
-            dealer.PrintDealerCard();
+            
             Console.WriteLine("-----------------");
-            rules.WhoWin(dealer.DealerCard, player.PlayerCard);
             Console.WriteLine("DealerResult is: " + dealerresult);
+            rules.WhoWin(dealer.DealerCard, player.PlayerCard);
+            
             if (rules.win == true)
             {
                 amount.Win(amount.PlayerBet);
