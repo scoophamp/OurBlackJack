@@ -29,7 +29,13 @@ namespace TheBlackJack
             player.AddCard(card);
 
         }
-        
+        public void PlayAgain()
+        {
+            player.PlayerCard.Clear();
+            dealer.DealerCard.Clear();
+            Meny();
+            GameOn();
+        }
 
         public void Meny()
         {
@@ -136,6 +142,16 @@ namespace TheBlackJack
             
             var myAmount=amount._myAmount;
             Console.WriteLine(amount.CheckValue());
+            Console.WriteLine("Do you want to play again? (Y/N)");
+            var answer = Console.ReadLine();
+            if(answer.ToUpper()=="Y")
+            {
+                PlayAgain();
+            }
+            else
+            {
+                Console.WriteLine("Bye Bye!!!");
+            }
            
             Console.ReadKey();
             Console.Clear();

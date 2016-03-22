@@ -13,7 +13,7 @@ namespace TheBlackJack
         public string _Nr { get; set; }
         public List<string> cards = new List<string>();
         public int _value { get; set; }
-        //public string _suit { get; set; }
+        
         public Card()
         {
 
