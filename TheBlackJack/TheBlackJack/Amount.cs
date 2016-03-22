@@ -8,20 +8,20 @@ namespace TheBlackJack
 {
     class Amount
     {
-        public int _myAmount { get; set; }
-        private int _dealerAmount { get; set; }
+        private int _myAmount;
 
-        private int _playerbet;
 
-        public int PlayerBet
+        public int MyAmount
         {
-            get { return _playerbet; }
-            set { _playerbet = value; }
+            get { return _myAmount; }
+            set { _myAmount = 100; }
         }
-
-
-
-
+       
+        public int DealerAmount
+        {
+            get { return _dealerAmount; }
+            set { _dealerAmount = value; }
+        }
 
         public int Win(int bet)
         {
