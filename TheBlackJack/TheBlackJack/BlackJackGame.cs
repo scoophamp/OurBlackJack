@@ -100,6 +100,10 @@ namespace TheBlackJack
             while (dealerresult < 17)
             {
                 rules.DealerMustDraw(dealer.DealerCard);
+                if (dealerresult > 17)
+                {
+                    break; 
+                }
                 break;
             }
             
