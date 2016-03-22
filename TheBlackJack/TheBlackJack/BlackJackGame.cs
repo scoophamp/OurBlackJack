@@ -8,6 +8,7 @@ namespace TheBlackJack
 {
     class BlackJackGame
     {
+        
         Card card = new Card();
         Dealer dealer = new Dealer();
         Deck deck = new Deck();
@@ -20,6 +21,7 @@ namespace TheBlackJack
             rules = new Rules(dealer);
         }
 
+        
         public void HitANewCard()
         {
 
@@ -59,6 +61,7 @@ namespace TheBlackJack
 
         public void GameOn()
         {
+            
             var newDeck = deck.giveDeck();
             dealer.ShuffleCard(newDeck);
             dealer.SetDeck(newDeck);
