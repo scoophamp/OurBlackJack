@@ -10,6 +10,10 @@ namespace TheBlackJack
     {
         public int _myAmount { get; set; }
         public int PlayerBet { get; set; }
+        public Amount(int playerAmount)
+        {
+            this._myAmount = playerAmount;
+        }
 
         public int Win(int bet)
         {

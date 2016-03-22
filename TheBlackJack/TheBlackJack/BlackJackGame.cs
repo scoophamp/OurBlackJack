@@ -14,7 +14,7 @@ namespace TheBlackJack
         Deck deck = new Deck();
         Player player = new Player();
         Rules rules;
-        Amount amount = new Amount();
+        Amount amount = new Amount(100);
 
         public BlackJackGame()
         {
@@ -39,7 +39,7 @@ namespace TheBlackJack
 
         public void Meny()
         {
-            amount._myAmount = 100;
+            //amount._myAmount = 100;
             Console.WriteLine("Welcome to Black Jack");
             Console.WriteLine("You start at " + amount._myAmount + " coins.");
             Console.WriteLine("How much do you wanna bet?");
@@ -120,7 +120,7 @@ namespace TheBlackJack
                 rules.DealerMustDraw(dealer.DealerCard);
                 if (dealerresult > 17)
                 {
-                    
+                    dealerresult = rules.DealerTooHigh(dealer.DealerCard);
                     break; 
                 }
                 break;
@@ -146,15 +146,18 @@ namespace TheBlackJack
             var answer = Console.ReadLine();
             if(answer.ToUpper()=="Y")
             {
+                Console.Clear();
                 PlayAgain();
             }
             else
             {
                 Console.WriteLine("Bye Bye!!!");
+                Console.ReadKey();
+                Environment.Exit(0);
             }
            
             Console.ReadKey();
-            Console.Clear();
+            
         }
         
     }
