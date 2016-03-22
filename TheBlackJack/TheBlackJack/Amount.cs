@@ -9,7 +9,7 @@ namespace TheBlackJack
     class Amount
     {
         private int _myAmount;
-        private int _dealerAmount;
+       
 
         public int MyAmount
         {
@@ -17,11 +17,7 @@ namespace TheBlackJack
             set { _myAmount = value; }
         }
        
-        public int DealerAmount
-        {
-            get { return _dealerAmount; }
-            set { _dealerAmount = value; }
-        }
+        
 
         public int Win(int bet)
         {
