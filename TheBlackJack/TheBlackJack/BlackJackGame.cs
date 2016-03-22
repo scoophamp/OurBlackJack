@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 
 namespace TheBlackJack
 {
@@ -39,7 +40,7 @@ namespace TheBlackJack
 
         public void Meny()
         {
-            //amount._myAmount = 100;
+            
             Console.WriteLine("Welcome to Black Jack");
             Console.WriteLine("You start at " + amount._myAmount + " coins.");
             Console.WriteLine("How much do you wanna bet?");
