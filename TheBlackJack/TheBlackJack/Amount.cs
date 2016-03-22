@@ -11,7 +11,6 @@ namespace TheBlackJack
         public int _myAmount { get; set; }
 
 
-
         public int PlayerBet { get; set; }
 
         public int Win(int bet)
@@ -26,9 +25,9 @@ namespace TheBlackJack
             _myAmount = _myAmount - bet;
             return _myAmount;
         }
-        public int CheckValue()
+        public string CheckValue()
         {
-            return _myAmount;
+            return string.Format("Your current amount is {0}",_myAmount);
         }
 
     }

@@ -111,7 +111,7 @@ namespace TheBlackJack
             rules.WhoWin(dealer.DealerCard, player.PlayerCard);
             var myAmount=amount._myAmount;
             Console.WriteLine("My Amount is: "+myAmount);
-
+            Console.WriteLine(amount.CheckValue());
             Console.ReadKey();
         }
         public void HitANewCard()
