@@ -9,9 +9,7 @@ namespace TheBlackJack
     class Rules
     {
         private Dealer _dealer;
-
-        private bool bust = true;
-
+        
         public Rules(Dealer dealer)
         {
             this._dealer = dealer;
