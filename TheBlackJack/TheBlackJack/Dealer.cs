@@ -67,6 +67,7 @@ namespace TheBlackJack
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("DealerCard: "+item);
                 Console.ForegroundColor = ConsoleColor.White;
+                
                
             }
         }
