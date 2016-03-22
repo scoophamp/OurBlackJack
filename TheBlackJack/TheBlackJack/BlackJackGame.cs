@@ -27,6 +27,7 @@ namespace TheBlackJack
             player.AddCard(card);
 
         }
+        
 
         public void Meny()
         {
@@ -130,7 +131,7 @@ namespace TheBlackJack
             
             var myAmount=amount._myAmount;
             Console.WriteLine(amount.CheckValue());
-
+           
             Console.ReadKey();
             Console.Clear();
         }
