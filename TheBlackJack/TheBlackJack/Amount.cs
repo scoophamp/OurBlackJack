@@ -37,7 +37,6 @@ namespace TheBlackJack
         }
         public int CheckValue()
         {
-            _myAmount = _myAmount;
             return _myAmount;
         }
 
