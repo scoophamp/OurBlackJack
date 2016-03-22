@@ -132,6 +132,7 @@ namespace TheBlackJack
             Console.WriteLine(amount.CheckValue());
 
             Console.ReadKey();
+            Console.Clear();
         }
         
     }
