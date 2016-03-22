@@ -24,7 +24,7 @@ namespace TheBlackJack
 
         public void Meny()
         {
-
+            amount._myAmount = 100;
             Console.WriteLine("Welcome to Black Jack");
             Console.WriteLine("You start at " + amount._myAmount + " coins.");
             Console.WriteLine("How much do you wanna bet?");
