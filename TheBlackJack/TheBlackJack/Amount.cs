@@ -9,8 +9,6 @@ namespace TheBlackJack
     class Amount
     {
         public int _myAmount { get; set; }
-
-
         public int PlayerBet { get; set; }
 
         public int Win(int bet)
