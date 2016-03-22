@@ -83,13 +83,25 @@ namespace TheBlackJack
                 playercard += item._value;
                
             }
-            if (dealercard < playercard || dealercard > 21)
+            if (playercard > dealercard && playercard <= 21)
             {
                 Console.WriteLine("Player Wins!!");
             }
-            else if (dealercard > playercard || dealercard<21)
+            else if (dealercard > playercard && dealercard<=21)
             {
                 Console.WriteLine("Dealer Wins!!");
+            }
+            if (playercard > dealercard && playercard > 21&&dealercard<=21)
+            {
+                Console.WriteLine("Dealer Wins!!");
+            }
+            else if (dealercard > playercard && dealercard > 21 && playercard <= 21)
+            {
+                Console.WriteLine("Player Wins!!");
+            }
+            if(playercard>21&&dealercard>21)
+            {
+                Console.WriteLine("Nobody wins");
             }
             else if(dealercard == playercard)
             {

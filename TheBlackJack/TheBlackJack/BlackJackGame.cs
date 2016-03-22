@@ -97,11 +97,12 @@ namespace TheBlackJack
             var dealerresult = rules.DealerTooHigh(dealer.DealerCard);
             dealer.PrintDealerCard();
             Console.WriteLine("DealerResult is: " + dealerresult);
-            if (dealerresult < 17)
+            while (dealerresult < 17)
             {
                 rules.DealerMustDraw(dealer.DealerCard);
+                break;
             }
-
+            
             rules.WhoWin(dealer.DealerCard, player.PlayerCard);
             amount.CheckValue();
 
