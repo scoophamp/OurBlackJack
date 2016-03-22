@@ -10,7 +10,7 @@ namespace TheBlackJack
     {
         private Dealer _dealer;
 
-        private bool bust = true;
+        public bool win { get; set; }
 
         public Rules(Dealer dealer)
         {
@@ -87,19 +87,22 @@ namespace TheBlackJack
             if (playercard > dealercard && playercard <= 21)
             {
                 Console.WriteLine("Player Wins!!");
-                
+                win = true;
             }
             else if (dealercard > playercard && dealercard<=21)
             {
                 Console.WriteLine("Dealer Wins!!");
+                win = false;
             }
             if (playercard > dealercard && playercard > 21&&dealercard<=21)
             {
                 Console.WriteLine("Dealer Wins!!");
+                win = false;
             }
             else if (dealercard > playercard && dealercard > 21 && playercard <= 21)
             {
                 Console.WriteLine("Player Wins!!");
+                win = true;
             }
             if(playercard>21&&dealercard>21)
             {
@@ -110,10 +113,12 @@ namespace TheBlackJack
                 if(playerCard.Count>=5)
                 {
                     Console.WriteLine("Player Wins!!");
+                    win = true;
                 }
                 else if(playerCard.Count<5)
                 {
                     Console.WriteLine("Dealer Wins!!");
+                    win = false;
                 }
             }
         }
