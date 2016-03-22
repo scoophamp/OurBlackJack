@@ -20,7 +20,13 @@ namespace TheBlackJack
             rules = new Rules(dealer);
         }
 
+        public void HitANewCard()
+        {
 
+            var card = dealer.GiveAwayCard();
+            player.AddCard(card);
+
+        }
 
         public void Meny()
         {
@@ -127,12 +133,6 @@ namespace TheBlackJack
 
             Console.ReadKey();
         }
-        public void HitANewCard()
-        {
-
-            var card = dealer.GiveAwayCard();
-            player.AddCard(card);
-
-        }
+        
     }
 }
