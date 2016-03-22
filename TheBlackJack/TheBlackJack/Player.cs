@@ -9,15 +9,14 @@ namespace TheBlackJack
     class Player
     {
         
-        public int _PlayerBet { get; set; }
-        public int _PlayerAmount { get; set; }
+       
         public List<Card> PlayerCard {get; set; }
       
         Deck deck = new Deck();
 
        public Player()
         {
-            this._PlayerAmount = 100;
+            
             this.PlayerCard = new List<Card>();
         }
         public Player(List<Card> deck)

@@ -109,7 +109,8 @@ namespace TheBlackJack
             dealer.PrintDealerCard();
             Console.WriteLine("DealerResult is: " + dealerresult);
             rules.WhoWin(dealer.DealerCard, player.PlayerCard);
-            amount.CheckValue();
+            var myAmount=player._PlayerAmount;
+            Console.WriteLine("My Amount is: "+myAmount);
 
             Console.ReadKey();
         }
