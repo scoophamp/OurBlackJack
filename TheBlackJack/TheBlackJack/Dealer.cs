@@ -9,8 +9,8 @@ namespace TheBlackJack
     class Dealer
     {
         
-        List <Card> deck;
-        public List<Card> DealerCard { get; set; }
+        List <Card> deck;//Dealerns kortlek
+        public List<Card> DealerCard { get; set; }//Dealerns hand med kort
 
         public Dealer()
         {
@@ -39,9 +39,9 @@ namespace TheBlackJack
             Card holder = new Card();
 
 
-            for (int y = 0; y < 4; y++)
+            for (int y = 0; y < 4; y++)//Går igen dem olika sorterna på korten
             {
-                for (int x = 0; x < 13; x++)
+                for (int x = 0; x < 13; x++)//Går igenom alla 13 korten i varje sort
                 {
                     int indexNr = random.Next(52);
 
@@ -62,7 +62,7 @@ namespace TheBlackJack
         }
         public void PrintDealerCard()
         {
-            foreach (var item in DealerCard)
+            foreach (var item in DealerCard)//Går igenom dealerns hand och skriver ut varje kort den har
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("DealerCard: "+item);

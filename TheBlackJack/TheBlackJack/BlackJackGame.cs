@@ -32,8 +32,8 @@ namespace TheBlackJack
         }
         public void PlayAgain()
         {
-            player.PlayerCard.Clear();
-            dealer.DealerCard.Clear();
+            player.PlayerCard.Clear();//Tar bort korten som spelaren hade förra omgången på handen
+            dealer.DealerCard.Clear();//Tar bort korten som dealern hade förra omgången på handen
             Meny();
             GameOn();
         }
@@ -46,7 +46,7 @@ namespace TheBlackJack
             Console.WriteLine("How much do you wanna bet?");
 
             int bet = 0;
-            int.TryParse(Console.ReadLine(), out bet);
+            int.TryParse(Console.ReadLine(), out bet);//Gör om inputen till en int och kollar så att det är en siffra som har skrivits in
             amount.PlayerBet = bet;
             
 
@@ -69,16 +69,16 @@ namespace TheBlackJack
         public void GameOn()
         {
             
-            var newDeck = deck.giveDeck();
-            dealer.ShuffleCard(newDeck);
-            dealer.SetDeck(newDeck);
-            HitANewCard();
-            dealer.DealerGetCard();
+            var newDeck = deck.giveDeck();//Hämtar ny korlek
+            dealer.ShuffleCard(newDeck);//Skickar kortleken till dealern som blandar den
+            dealer.SetDeck(newDeck);//Dealern tar kortleken och lägger den till sin
+            HitANewCard();//Player får ett nytt kort
+            dealer.DealerGetCard();//Dealern får ett nytt kort
             HitANewCard();
 
-            dealer.PrintDealerCard();
+            dealer.PrintDealerCard();//Skriver ut dealerns kort som den har på handen
             Console.WriteLine("----------------");
-            player.PrintPlayerCard();
+            player.PrintPlayerCard();//Skriver ut spelarens kort som den har på handen
 
             bool choice = true;
             while (choice)
@@ -92,7 +92,7 @@ namespace TheBlackJack
                     case "H":
                         HitANewCard();
                         player.PrintPlayerCard();
-                        var playerresult = rules.PlayerTooHigh(player.PlayerCard);
+                        var playerresult = rules.PlayerTooHigh(player.PlayerCard);//Kollar om spelarens kort är högre än 21
                         if (playerresult > 21)
                         {
                             choice = false;
@@ -113,9 +113,9 @@ namespace TheBlackJack
             dealer.DealerGetCard();
             dealer.PrintDealerCard();
             Console.WriteLine("-----------------");
-            rules.DealerMustDraw(dealer.DealerCard);
+            rules.DealerMustDraw(dealer.DealerCard);//Skickar in dealerns korthand och ser om den är under 17 då måste den dra ett kort
             var dealerresult = rules.DealerTooHigh(dealer.DealerCard);
-           
+           //Här kollas dealerns kort om dem är under 17 eller inte
             while (dealerresult < 17)
             {
                 rules.DealerMustDraw(dealer.DealerCard);
@@ -130,8 +130,8 @@ namespace TheBlackJack
             
             Console.WriteLine("-----------------");
             Console.WriteLine("DealerResult is: " + dealerresult);
-            rules.WhoWin(dealer.DealerCard, player.PlayerCard);
-            
+            rules.WhoWin(dealer.DealerCard, player.PlayerCard);//Här skickas båda händerna in för att kolla vem som vann
+            //Här kollas det om spelaren har vunnit eller förlorat
             if (rules.win == true)
             {
                 amount.Win(amount.PlayerBet);
@@ -145,6 +145,7 @@ namespace TheBlackJack
             Console.WriteLine(amount.CheckValue());
             Console.WriteLine("Do you want to play again? (Y/N)");
             var answer = Console.ReadLine();
+            //Om man vill spela en gång till så anropas metoden som kör spelet igen
             if(answer.ToUpper()=="Y")
             {
                 Console.Clear();
