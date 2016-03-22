@@ -102,7 +102,7 @@ namespace TheBlackJack
                 rules.DealerMustDraw(dealer.DealerCard);
                 if (dealerresult > 17)
                 {
-                    break; 
+                    break;
                 }
                 break;
             }

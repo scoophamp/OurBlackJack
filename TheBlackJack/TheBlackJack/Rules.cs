@@ -10,7 +10,7 @@ namespace TheBlackJack
     {
         private Dealer _dealer;
 
-        public bool win { get; set; }
+        public bool? win { get; set; }
 
         public Rules(Dealer dealer)
         {
@@ -107,6 +107,7 @@ namespace TheBlackJack
             if(playercard>21&&dealercard>21)
             {
                 Console.WriteLine("Nobody wins");
+                win = null;
             }
             else if(dealercard == playercard)
             {
