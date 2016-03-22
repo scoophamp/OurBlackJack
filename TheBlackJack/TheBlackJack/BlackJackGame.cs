@@ -95,14 +95,15 @@ namespace TheBlackJack
             Console.WriteLine("------------");
             rules.DealerMustDraw(dealer.DealerCard);
             var dealerresult = rules.DealerTooHigh(dealer.DealerCard);
-            dealer.PrintDealerCard();
-            Console.WriteLine("DealerResult is: " + dealerresult);
+           
+            
             while (dealerresult < 17)
             {
                 rules.DealerMustDraw(dealer.DealerCard);
                 break;
             }
-            
+            dealer.PrintDealerCard();
+            Console.WriteLine("DealerResult is: " + dealerresult);
             rules.WhoWin(dealer.DealerCard, player.PlayerCard);
             amount.CheckValue();
 
