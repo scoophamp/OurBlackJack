@@ -135,8 +135,8 @@ namespace TheBlackJack
                 }
                 break;
             }
-            
-            
+
+            dealerresult = rules.DealerTooHigh(dealer.DealerCard);
             Console.WriteLine("-----------------");
             Console.WriteLine("DealerResult is: " + dealerresult);
             rules.WhoWin(dealer.DealerCard, player.PlayerCard);//Här skickas båda händerna in för att kolla vem som vann
