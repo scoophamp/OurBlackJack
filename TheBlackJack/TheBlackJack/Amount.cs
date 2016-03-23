@@ -19,17 +19,18 @@ namespace TheBlackJack
         {
             bet = bet * 2;
             _myAmount = _myAmount + bet;
-            
+
             return _myAmount;
         }
         public int Loose(int bet)
         {
-           
+
             return _myAmount;
         }
         public string CheckValue()
         {
-            return string.Format("Your current amount is {0}",_myAmount);
+            
+            return string.Format("Your current amount is {0}", _myAmount);
         }
 
     }
