@@ -50,10 +50,19 @@ namespace TheBlackJack
             amount.PlayerBet = bet;
             
 
-            while (bet > amount._myAmount)
+            while (bet > amount._myAmount || bet == 0)
             {
-                Console.WriteLine("You don't have that much of amount");
+                if (bet == 0)
+                {
+                    Console.WriteLine("You can't bet 0");
+                }
+                else
+                {
+                    Console.WriteLine("You don't have that much of amount");
+                }
+                
                 Console.WriteLine("How much do you wanna bet?");
+
                 bet = 0;
                 int.TryParse(Console.ReadLine(), out bet);
                 amount.PlayerBet = bet;
