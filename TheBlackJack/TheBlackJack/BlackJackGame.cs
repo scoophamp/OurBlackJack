@@ -40,10 +40,11 @@ namespace TheBlackJack
 
         public void Meny()
         {
-            
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("Welcome to Black Jack");
             Console.WriteLine("You start at " + amount._myAmount + " coins.");
-            Console.WriteLine("How much do you wanna bet?");
+            Console.Write("How much do you wanna bet? ");
+            Console.ForegroundColor = ConsoleColor.White;
 
             int bet = 0;
             int.TryParse(Console.ReadLine(), out bet);//Gör om inputen till en int och kollar så att det är en siffra som har skrivits in
