@@ -143,20 +143,32 @@ namespace TheBlackJack
             
             var myAmount=amount._myAmount;
             Console.WriteLine(amount.CheckValue());
-            Console.WriteLine("Do you want to play again? (Y/N)");
-            var answer = Console.ReadLine();
-            //Om man vill spela en gång till så anropas metoden som kör spelet igen
-            if(answer.ToUpper()=="Y")
+            if (amount._myAmount == 0)
             {
-                Console.Clear();
-                PlayAgain();
+                Console.WriteLine("You're out of money, good luck next time!");
+                Console.WriteLine();
+                Environment.Exit(0);
+
             }
             else
             {
-                Console.WriteLine("Bye Bye!!!");
-                Console.ReadKey();
-                Environment.Exit(0);
+                Console.WriteLine("Do you want to play again? (Y/N)");
+                var answer = Console.ReadLine();
+                //Om man vill spela en gång till så anropas metoden som kör spelet igen
+                if (answer.ToUpper() == "Y")
+                {
+                    Console.Clear();
+
+                    PlayAgain();
+                }
+                else
+                {
+                    Console.WriteLine("Bye Bye!!!");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
             }
+            
            
             Console.ReadKey();
             
