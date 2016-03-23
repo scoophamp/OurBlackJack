@@ -164,6 +164,7 @@ namespace TheBlackJack
             }
             else
             {
+
                 Console.WriteLine("Do you want to play again? (Y/N)");
                 var answer = Console.ReadLine();
                 //Om man vill spela en gång till så anropas metoden som kör spelet igen
